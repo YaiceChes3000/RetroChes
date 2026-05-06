@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Retro Games</title>
 
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    .buttons {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    #gameFrame {
+      border: none;
+      border-radius: 10px;
+      width: 800px;
+      height: 500px;
+      max-width: 95%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎮 Retro Games</h1>
+<p>Выбери игру 👇</p>
+
+<div class="buttons">
+  <button onclick="loadGame('https://archive.org/embed/msdos_Prince_of_Persia_1990')">Prince of Persia</button>
+  <button onclick="loadGame('https://archive.org/embed/doom_dos')">DOOM</button>
+  <button onclick="loadGame('https://archive.org/embed/pacman_msdos')">Pac-Man</button>
+  <button onclick="loadGame('https://archive.org/embed/tetris_msdos')">Tetris</button>
+</div>
+
+<iframe id="gameFrame" src=""></iframe>
+
+<script>
+  function loadGame(url) {
+    document.getElementById('gameFrame').src = url;
+  }
+</script>
+
+</body>
+</html>
